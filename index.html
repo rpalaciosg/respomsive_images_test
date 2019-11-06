@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Image Test</title>
+    <style>
+      img { 
+        max-width: 100%;
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+    <h2>Responsive Image Test</h2>
+    <!-- Forma realizada en Responsive Image Test -->
+    <picture>
+        <source>
+        <img 
+          sizes="(max-width: 1400px) 100vw, 1400px"
+          srcset="
+            img/blake-connally_scale,w_200.jpg 200w,
+            img/blake-connally_scale,w_495.jpg 495w,
+            img/blake-connally_scale,w_658.jpg 658w,
+            img/blake-connally_scale,w_813.jpg 813w,
+            img/blake-connally_scale,w_921.jpg 921w,
+            img/blake-connally_scale,w_1016.jpg 1016w,
+            img/blake-connally_scale,w_1107.jpg 1107w,
+            img/blake-connally_scale,w_1194.jpg 1194w,
+            img/blake-connally_scale,w_1265.jpg 1265w,
+            img/blake-connally_scale,w_1333.jpg 1333w,
+            img/blake-connally_scale,w_1397.jpg 1397w,
+            img/blake-connally_scale,w_1400.jpg 1400w
+          "
+          src="img/blake-connally-IKUYGCFmfw4-unsplash_zlrrcd_c_scale, w_1400.jpg" 
+          alt=""
+        >
+    </picture>
+
+    <!-- Forma usando formatos de imagen ´.webp´ y densidad 1x y 2x -->
+    <picture> 
+      <source media="(min-width: 900px)" srcset="image-lg_1x.webp 1x, image-lg_2x.webp 2x" type="image/webp"> 
+      <source media="(min-width: 601px)" srcset="image-md_1x.webp 1x, image-md_2x.webp 2x" type="image/webp" >
+      <source media="(max-width: 600px)" srcset="image-sm_1x.webp 1x, image-sm_2x.webp 2x" type="image/webp" > 
+      <img srcset="image-sm_1x.jpg  600w, image-md_1x.jpg  900w, image-lg_1x.jpg  1440w" src="image_lg_1x.jpg" type="image/jpeg" alt="image description">
+    </picture>
+</body>
+</html>
